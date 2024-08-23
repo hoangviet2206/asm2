@@ -1,0 +1,29 @@
+<div class="container text-center card bg-light col-md-6">
+   <form action="/Lego/addlego" method="post">
+      <h1 class="alert alert-warning text-uppercase">Add new lego</h1>
+      <div class="form-group mt-3">
+         <label class="text text-danger fw-bold">Title</label>
+         <input class="form-control" type="text" placeholder="Enter title" name="title" required minlength="5">
+      </div>
+      <div class="form-group mt-3">
+         <label class="text text-danger fw-bold">Company</label>
+         <select class="form-control" name="company">
+            <option value="hhhh">hhh</option>
+            <option value="Mô hình">Mohinh</option>
+            <option value="KID">kid</option>
+            <option value="bearbrick">bearbrick</option>
+         </select>
+      </div>
+      <div class="form-group mt-3">
+         <label class="text text-danger fw-bold">Price</label>
+         <input class="form-control" type="number" name="price" placeholder="Enter product price">
+      </div>
+      <div class="form-group mt-3">
+         <label class="text text-danger fw-bold">Cover</label>
+         <input class="form-control" type="url" name="cover" placeholder="Enter product cover url" required>
+      </div>
+      <div class="form-group mt-3 mb-3">
+         <input class="btn btn-success" type="submit" value="Add">
+      </div>
+   </form>
+</div>

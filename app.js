@@ -24,6 +24,9 @@ app.use(bodyParser.urlencoded({ extended : true }))
 // (3) declare router
 var ProductRouter = require('./routes/product')
 app.use('/product', ProductRouter)
+var LegoRouter = require('./routes/lego')
+app.use('/Lego', LegoRouter)
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

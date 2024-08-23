@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>lego Detail</title>
+</head>
+
+<body>
+   <div class="container">
+      <div class="row">
+         <div class="col">
+            <img src="{{ legos.cover }}" width="400" height="450">
+         </div>
+         <div class="col">
+            <h1 class="text text-danger">Lego Detail</h1>
+            <h3>company: {{ legos.company }}</h3>
+            <h3>Title: {{ legos.title }}</h3>
+            <h3>Price: ${{ legos.price }}</h3>
+           
+         </div>
+      </div>
+   </div>
+</body>
+
+</html>

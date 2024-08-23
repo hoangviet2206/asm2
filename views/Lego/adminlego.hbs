@@ -1,0 +1,47 @@
+<table class="table table-primary text-center">
+   <thead>
+      <tr>
+         <th colspan="3" class="h1 text-danger">LEGO LIST</th>
+         <th>
+            <a href="/Lego/addlego" class="btn btn-primary">Add</a>
+         </th>
+      </tr>
+      <tr>
+         <th colspan="2">
+            <form action="/Lego/searchlego" method="post">
+               <input class="form-control" type="search" name="title"
+               placeholder="Search by title" required>
+            </form>
+         </th>
+         <th colspan="2">
+            <a href="/Lego/sort/asc" class="btn btn-secondary"> ASC</a>
+            <a href="/Lego/sort/desc" class="btn btn-success">DESC</a>
+         </th>
+      </tr>
+      <tr>
+         <th> Title</th>
+         <th> Price</th>
+         <th> Cover</th>
+         <th>Menu</th>
+      </tr>
+   </thead>
+   <tbody>
+      {{#each legos }}
+      <tr>
+         <td>{{ title }}</td>
+         <td>${{ price }}</td>
+         <td>
+            <a href="/Lego/detaillego/{{ _id}}">
+               <img src="{{ cover }}" alt="product cover" width="100" height="120">
+            </a>
+         </td>
+         <td>
+            <a class="btn btn-info" href="/Lego/detaillego/{{ _id}}">Detail</a>
+            <a class="btn btn-warning" href="/Lego/editlego/{{ _id}}">Edit</a>
+            <a class="btn btn-danger" href="/Lego/deletelego/{{ _id}}"
+               onclick="return confirm('Are you sure to delete this product ?')">Delete</a>
+         </td>
+      </tr>
+      {{/each}}
+   </tbody>
+</table>
