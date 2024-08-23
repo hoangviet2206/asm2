@@ -7,12 +7,13 @@ router.get('/', async (req, res) => {
   try {
       let products = await ProductModel.find({});
       console.log(products);  // Log sản phẩm ra để kiểm tra
-      res.render('home', { products });
+      res.render('Home', { products });
   } catch (err) {
       console.error('Error fetching products:', err);
       res.status(500).send('Internal Server Error');
   }
 });
+
 
 // Route xử lý đăng nhập
 router.post('/login', (req, res) => {
